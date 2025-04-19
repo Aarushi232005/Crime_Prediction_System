@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Crime Rate Predictor</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600&display=swap">
+    <link rel="stylesheet" href="static/styles.css">
+</head>
+
+<body>
+    <!-- Background Video -->
+    <div class="video-background">
+        <video autoplay muted loop id="bg-video">
+            <source src="static/video/background.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+        </video>
+    </div>
+
+    <header>
+        <h1 class="title">Crime Rate Predictor</h1>
+        <h2 class="tagline">Ensuring Safety Together</h2>
+    </header>
+
+    <section class="form-section">
+        <form action="/predict" method="POST" class="predict-form">
+            <div class="form-group">
+                <label for="city">Select City</label>
+                <select name="city" id="city">
+                    <option value="">--Select City--</option>
+                    <option value="0">Ahmedabad</option>
+                    <option value="1">Bengaluru</option>
+                    <option value="2">Chennai</option>
+                    <option value="3">Coimbatore</option>
+                    <option value="4">Delhi</option>
+                    <option value="5">Ghaziabad</option>
+                    <option value="6">Hyderabad</option>
+                    <option value="7">Indore</option>
+                    <option value="8">Jaipur</option>
+                    <option value="9">Kanpur</option>
+                    <option value="10">Kochi</option>
+                    <option value="11">Kolkata</option>
+                    <option value="12">Kozhikode</option>
+                    <option value="13">Lucknow</option>
+                    <option value="14">Mumbai</option>
+                    <option value="15">Nagpur</option>
+                    <option value="16">Patna</option>
+                    <option value="17">Pune</option>
+                    <option value="18">Surat</option>
+                </select>
+            </div>
+
+            <div class="form-group">
+                <label for="crime">Select Crime Type</label>
+                <select name="crime" id="crime">
+                    <option value="">--Select Crime Type--</option>
+                    <option value="9">Murder</option>
+                    <option value="8">Kidnapping</option>
+                    <option value="7">Economic Offences</option>
+                    <option value="6">Cyber Crimes</option>
+                    <option value="5">Crime against women</option>
+                    <option value="4">Crime against children</option>
+                    <option value="3">Crime against Senior Citizen</option>
+                    <option value="2">Crime against ST</option>
+                    <option value="1">Crime against SC</option>
+                    <option value="0">Crime Committed by Juveniles</option>
+                </select>
+            </div>
+
+            <div class="form-group">
+                <label for="year">Select Year</label>
+                <select name="year" id="year">
+                    <option value="">--Select Year--</option>
+                    <script>
+                        for (let year = 2000; year <= 2050; year++) {
+                            document.write(`<option value="${year}">${year}</option>`);
+                        }
+                    </script>
+                </select>
+            </div>
+
+            <button type="submit" class="btn">Predict</button>
+        </form>
+    </section>
+
+    <section class="about-section">
+        <h2>About the Application</h2>
+        <p>
+            This Crime Rate Predictor helps anticipate crime trends in Indian cities using advanced machine learning techniques. It aids in better resource allocation and improving public safety.
+        </p>
+    </section>
+
+    <footer>
+        <p>Developed By: Aarushi Singh</p>
+        <a href="https://www.linkedin.com/in/aarushi-singh-2110bb25b/" target="_blank">
+            <img src="static/images/linkedin.png" alt="LinkedIn" width="30">
+        </a>
+    </footer>
+
+    <script src="static/main.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Crime Rate Predictor - Results</title>
+    <link rel="stylesheet" href="static/styles.css">
+</head>
+
+<body>
+    <!-- Background Video -->
+    <div class="video-background">
+        <video autoplay muted loop id="bg-video">
+            <source src="static/video/background.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+        </video>
+    </div>
+
+    <header>
+        <h1 class="title">Prediction Results</h1>
+    </header>
+
+    <section class="result-section">
+        <div class="result-box">
+            <h2>Prediction Summary</h2>
+            <p><strong>Selected City:</strong>  <option value="selected">{{city_name}}</option></p>
+            <p><strong>Crime Type:</strong> <option value="selected">{{crime_type}}</option></p>
+            <p><strong>Year:</strong> <option value="selected">{{ year }}</option></p>
+            <p><strong>Estimated Crime Rate:</strong> {{ crime_rate }}</p>
+            <p><strong>Estimated Cases:</strong> {{ cases }}</p>
+            <p><strong>Population:</strong> {{ population }}</p>
+            <p><strong>Crime Status:</strong> {{crime_status }}</p>
+            <div class="btn-container">
+                <a href="/" class="btn">Check Again</a>
+                <a href="{{ url_for('static', filename='Download/a_report.docx') }}" class="btn1">Read Report</a>
+
+
+
+            </div>
+        </div>
+
+        </div>
+    </section>
+
+    <footer>
+        <p>Developed By: Aarushi Singh</p>
+        <a href="https://www.linkedin.com/in/aarushi-singh-2110bb25b/" target="_blank">
+            <img src="static/images/linkedin.png" alt="LinkedIn" width="30">
+        </a>
+    </footer>
+</body>
+
+</html>
